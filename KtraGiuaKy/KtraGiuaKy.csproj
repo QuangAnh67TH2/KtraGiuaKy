@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F92D6B9E-AC97-4488-A726-49C016BC45B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KtraGiuaKy</RootNamespace>
+    <AssemblyName>KtraGiuaKy</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>..\..\..\..\..\REVIT-app\Revit 2025\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>..\..\..\..\..\REVIT-app\Revit 2025\RevitAPIUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChonVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonVatLieu.Designer.cs">
+      <DependentUpon>ChonVatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class-ThongTinCot.cs" />
+    <Compile Include="CmdShowSTARTForm.cs" />
+    <Compile Include="DanhSachAs.cs" />
+    <Compile Include="LayThongTinCot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayThongTinCot.Designer.cs">
+      <DependentUpon>LayThongTinCot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LechTamBe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LechTamBe.Designer.cs">
+      <DependentUpon>LechTamBe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LechTamLonsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LechTamLonsp.Designer.cs">
+      <DependentUpon>LechTamLonsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LechTamLon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LechTamLon.Designer.cs">
+      <DependentUpon>LechTamLon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoiLucTinhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoiLucTinhToan.Designer.cs">
+      <DependentUpon>NoiLucTinhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RebarHelper.cs" />
+    <Compile Include="SoLieuTinhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoLieuTinhToan.Designer.cs">
+      <DependentUpon>SoLieuTinhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemTraTHChiuNen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemTraTHChiuNen.Designer.cs">
+      <DependentUpon>KiemTraTHChiuNen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="START.Designer.cs">
+      <DependentUpon>START.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VatLieu.cs" />
+    <Compile Include="VeThep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeThep.Designer.cs">
+      <DependentUpon>VeThep.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChonVatLieu.resx">
+      <DependentUpon>ChonVatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayThongTinCot.resx">
+      <DependentUpon>LayThongTinCot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LechTamBe.resx">
+      <DependentUpon>LechTamBe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LechTamLon.resx">
+      <DependentUpon>LechTamLon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LechTamLonsp.resx">
+      <DependentUpon>LechTamLonsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoiLucTinhToan.resx">
+      <DependentUpon>NoiLucTinhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoLieuTinhToan.resx">
+      <DependentUpon>SoLieuTinhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemTraTHChiuNen.resx">
+      <DependentUpon>KiemTraTHChiuNen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="START.resx">
+      <DependentUpon>START.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeThep.resx">
+      <DependentUpon>VeThep.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
